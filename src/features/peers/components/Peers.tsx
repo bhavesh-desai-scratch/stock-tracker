@@ -14,11 +14,8 @@ export const Peers: FC<PeersProps> = ({ peers }) => {
   const dispatch = useDispatch();
   const onClickHandler: React.MouseEventHandler<HTMLButtonElement> = event => {
     const symbol = event.currentTarget.value;
-    const peerStock =
-      peers && peers.find((peer: IPeers) => peer.symbol === symbol);
-    if (peerStock && peerStock.name) {
-      dispatch(updateStockAction(peerStock));
-    }
+    const updateStock = (symbol: string) => dispatch(updateStockAction(symbol));
+    updateStock(symbol);
   };
   const renderPeersComponent = () => (
     <ul className="peers__list">

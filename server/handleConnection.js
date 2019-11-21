@@ -69,8 +69,7 @@ exports.handleConnection = socket => {
       socket,
       stockName,
       HOST,
-      TOKEN,
-      allSymbols
+      TOKEN
     );
     timerIDs.chartData = callAndStartIntervals(
       emitChartData,

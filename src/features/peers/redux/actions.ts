@@ -4,7 +4,6 @@ import { ResetAction } from "store/constants";
 
 export interface IPeers {
   symbol: string;
-  name: string;
 }
 export type UpdateTopPeersAction = ActionWithPayload<
   typeof UPDATE_TOP_PEERS,
